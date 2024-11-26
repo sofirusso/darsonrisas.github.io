@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilo para el menú de navegación */
+.menu {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Estilo para los elementos del menú */
+.menu li {
+    margin: 20px 0; /* Espaciado entre los elementos del menú */
+}
+
+/* Estilo para los enlaces del menú */
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: "montserrat";
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+.imagen1 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.menu li a:hover {
+    color: #ffcc00;
+}
+
+/* Icono de menú hamburguesa */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 10; /* Asegura que el icono esté siempre encima */
+}
+
+/* Oculta el checkbox que controla el menú */
+#menu-toggle {
+    display: none;
+    width: 50px;
+}
+
+.icono {
+    width: 30px;
+    margin: 5px;
+}
+
+#menu-toggle:checked ~ label > .icono {
+    background-image: url(../img/wrong_5346703.svg);
+}
+
+/* Contenedor del menú a pantalla completa */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ee774b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Inicialmente oculto */
+    display: none; /* Oculta el menú de la pantalla */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Animación de entrada/salida */
+}
+
+/* Muestra el menú cuando el checkbox está marcado */
+#menu-toggle:checked ~ .fullscreen-menu {
+    display: flex;
+}
+:root {
+    --color-principal: #ee774b;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--color-principal);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+/* Parallax Sections */
+.parallax {
+    height: 60vh;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Specific Background Images */
+.parallax1 {
+    background-image: url("../img/68.jpg");
+}
+
+.parallax2 {
+    background-image: url("../img/72.jpg");
+}
+
+.parallax3 {
+    background-image: url("../img/IMG_1478.JPG");
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+/* Text Box Styling */
+.text-box {
+    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro en móviles para mejor legibilidad */
+    padding: 15px;
+    border-radius: 5px;
+    animation: bounce 1s ease;
+}
+
+.text-box h1,
+.text-box h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.text-box p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Content Sections */
+.content {
+    background-color: #f7f7f7;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.content p {
+    margin: 0;
+    padding: 10px;
+    font-family: "montserrat";
+    font-weight: 700;
+}
+
+/* Parallax Sections */
+.parallax2 {
+    height: 60vh;
+    background-attachment: scroll; /* Efecto parallax desactivado para móviles */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Fondo para la sección "Sobre Nosotros" */
+.parallax-sobre-nosotros {
+    background-image: url("../img/10575346_1700991636786524_7955323603087797937_o.jpg"); /* Reemplaza con la ruta correcta */
+}
+
+/* Texto de la sección parallax */
+.text-box2 {
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.text-box2 h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.text-box2 p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Contenido de la sección "Sobre Nosotros" */
+.about-content {
+    background-color: #fafafa;
+    padding: 50px 20px;
+    color: #333;
+    line-height: 1.6;
+    margin: auto;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: "montserrat";
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.about-content ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.about-content ul li strong {
+    color: var(--color-principal);
+}
+
+parallax-proyectos {
+    background-image: url("url_de_imagen_proyectos.jpg");
+}
+
+/* Contenido de la sección "Proyectos" */
+.projects-content {
+    background-color: #fafafa;
+    padding: 50px 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.projects-content h2 {
+    font-size: 2em;
+    color: var(--color-principal);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Flexbox para organizar las cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--color-principal);
+}
+
+.card-content p {
+    font-size: 15px;
+    color: #666;
+}
+
+/* Fondo para la sección "Contacto" */
+.parallax-contacto {
+    background-image: url("../img/1933608_1700990396786648_8397823778618621745_o.jpg"); /* Reemplaza con la ruta correcta */
+}
+
+/* Contenido de la sección "Contacto" */
+.contact-content {
+    background-color: #fafafa;
+    padding: 50px 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-container form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-container h2 {
+    font-size: 1.8em;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.text-box button {
+    font-family: "montserrat";
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+button:hover {
+    background-color: #ff5820;
+    animation: bounce 1s ease;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-media {
+    text-align: center;
+}
+
+.social-media h2 {
+    font-size: 1.5em;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 2em;
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-principal);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .fullscreen-menu {
+        position: static;
+        display: block; /* Oculta el menú a pantalla completa en pantallas grandes */
+        background-color: transparent;
+    }
+
+    .hamburger {
+        display: none; /* Oculta el icono de la hamburguesa en pantallas grandes */
+    }
+
+    .menu {
+        display: flex; /* Muestra el menú de forma horizontal */
+        flex-direction: row; /* Cambia la dirección a fila */
+        gap: 20px; /* Espaciado entre los elementos del menú */
+    }
+
+    .menu li a {
+        color: black;
+    }
+    .parallax {
+        height: 80vh;
+        background-attachment: fixed; /* Activar parallax en pantallas más grandes */
+    }
+
+    .text-box {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .text-box h1,
+    .text-box h2 {
+        font-size: 2em;
+    }
+
+    .text-box p {
+        font-size: 1.2em;
+    }
+
+    .content {
+        padding: 40px 20px;
+        font-size: 1.4em;
+    }
+    .about-content {
+        margin: auto;
+    }
+}
+.values-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 20px;
+}
+
+.values-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.values-list {
+    display: flex; /* Activar Flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos bajen a una nueva fila si es necesario */
+    gap: 20px; /* Espacio entre columnas */
+    list-style: none; /* Eliminar puntos de lista */
+    padding: 0;
+}
+
+.values-list li {
+    flex: 1 1 calc(50% - 20px); /* Ocupa el 50% del ancho menos el espacio del gap */
+    background: #f9f9f9; /* Fondo suave */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.values-list li strong {
+    display: block; /* Hacer que el texto en negrita esté en una línea aparte */
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
